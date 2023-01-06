@@ -28,6 +28,12 @@ const Question = new Schema(
     SampleOut: {
       type: String
     },
+    Constraints: {
+      type: String
+    },
+    timelimit: {
+      type: Number
+    },
     Cases: {
       type: Number
     }
@@ -37,4 +43,4 @@ const Question = new Schema(
   }
 );
 
-module.exports = model("Game", Question);
+module.exports = model("Questions", Question);

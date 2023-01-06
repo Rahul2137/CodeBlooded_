@@ -14,14 +14,11 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    unique: true,
   },
-  games: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Game",
-    },
-  ],
+  contest_organizer: {
+    type: String,
+    default: "false"
+  },
 });
 
 module.exports = model("User", userSchema);
